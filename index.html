@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My First Angular App</title>
+</head>
+<body ng-app="myApp">
+  <h1>ToDo List!</h1>
+  <div ng-controller="myCtrl">
+    <input ng-model="taskitem"></input>
+    <button ng-click="add()">Add!</button>
+
+    <h2>Current Task:</h2>
+    <ul ng-repeat="item in todolist">
+      <li>{{item}}
+        <button ng-click="del()">Del</button>
+      </li>
+    </ul>
+  </div>
+
+<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+<script type="text/javascript" src="scripts/app.js"></script>
+
+
+</body>
+</html>
